@@ -1,0 +1,31 @@
+
+spring:
+  datasource:
+    username: root
+    password: pp1788295
+    url: jdbc:mysql://localhost:3306/search_engine1
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create
+      generate-ddl: true
+    show-sql: true
+
+  # логи
+  logging:
+    level:
+      org.hibernate.SQL: info
+
+
+indexing-settings:
+  sites:
+    - url: https://www.lenta.ru
+      name: Лента.ру
+    - url: https://www.rambler.ru
+      name: Rambler
+    - url: https://www.playback.ru
+      name: PlayBack.Ru
+
